@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "kotlin-android-lista-de-compras"
+rootProject.name = "Lista de Compras"
 include(":app")
  

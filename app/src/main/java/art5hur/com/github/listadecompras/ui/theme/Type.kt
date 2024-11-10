@@ -1,4 +1,4 @@
-package carreiras.com.github.kotlin_android_lista_de_compras.ui.theme
+package art5hur.com.github.listadecompras.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

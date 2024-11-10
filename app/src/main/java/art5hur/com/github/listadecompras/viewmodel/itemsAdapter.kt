@@ -1,4 +1,4 @@
-package carreiras.com.github.kotlin_android_lista_de_compras
+package art5hur.com.github.listadecompras.viewmodel
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,12 +6,15 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import art5hur.com.github.listadecompras.R
+import art5hur.com.github.listadecompras.model.ItemModel
 
-class ItemsAdapter : RecyclerView.Adapter<ItemsAdapter.ItemViewHolder>() {
+class ItemsAdapter(private val onItemRemoved: (ItemModel) -> Unit) :
+    RecyclerView.Adapter<ItemsAdapter.ItemViewHolder>() {
 
     private var items = listOf<ItemModel>()
 
-    class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    inner class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         val textView = view.findViewById<TextView>(R.id.textViewItem)
         val button = view.findViewById<ImageButton>(R.id.imageButton)
@@ -20,7 +23,7 @@ class ItemsAdapter : RecyclerView.Adapter<ItemsAdapter.ItemViewHolder>() {
             textView.text = item.name
 
             button.setOnClickListener {
-                item.onRemove(item)
+                onItemRemoved(item)
             }
         }
     }

@@ -1,4 +1,4 @@
-package carreiras.com.github.kotlin_android_lista_de_compras
+package art5hur.com.github.listadecompras
 
 import org.junit.Test
 
